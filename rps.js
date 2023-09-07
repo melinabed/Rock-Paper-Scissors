@@ -1,11 +1,18 @@
 const choices = ["rock","paper", "scissors"];
 
+
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)]
-}
-//console.log(getComputerChoice(choices));
 
-function game() {}
+}
+
+
+function game(playRound) {
+    
+}
+
+
+
 
 function playRound(playerSelection, computerSelection) {
     let result;
@@ -22,3 +29,6 @@ const computerSelection = getComputerChoice();
 
 
 console.log(playRound(playerSelection, computerSelection));
+
+
+//Start loop or something for the game function!!!!!!
