@@ -1,4 +1,7 @@
 const choices = ["rock","paper", "scissors"];
+const playerSelection = prompt();
+const computerSelection = getComputerChoice();
+
 
 
 function getComputerChoice() {
@@ -7,7 +10,7 @@ function getComputerChoice() {
 }
 
 
-function game(playRound) {
+function game() {
     
 }
 
@@ -18,14 +21,16 @@ function playRound(playerSelection, computerSelection) {
     let result;
     if (playerSelection === computerSelection) {
         result = "Tie!";
-    } else {
-        result = "Something went wrong";
-    }
-    return result;
+    } else if (playerSelection === "rock" && computerSelection === "scissors" ||
+               playerSelection === "paper" && computerSelection === "rock" ||
+               playerSelection === "scissors" && computerSelection === "paper") {
+        result = "You Win!";   
+        } else (computerSelection === "rock" && playerSelection === "scissors" ||
+                computerSelection === "paper" && playerSelection === "rock" ||
+                computerSelection === "scissors" && playerSelection === "paper"); {
+        result = "You Lose!";
+    return result;}
 }
- 
-const playerSelection = "rock"
-const computerSelection = getComputerChoice();
 
 
 console.log(playRound(playerSelection, computerSelection));
